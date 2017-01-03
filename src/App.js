@@ -2,7 +2,19 @@ import React from 'react';
 
 const App = React.createClass({
   render(){
-    return <h1>Hello world</h1>
+    let text = this.props.text;
+    return (
+      <div>
+        <h1>{text}</h1>
+      </div>
+    )
+  },
+  propTypes: {
+    text: React.PropTypes.string,
+    cat: React.PropTypes.number.isRequired
+  },
+  defaultProps: {
+    text: 'this is the default text'
   }
 })
 
